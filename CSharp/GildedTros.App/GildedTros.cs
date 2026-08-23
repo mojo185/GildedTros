@@ -2,92 +2,66 @@
 
 namespace GildedTros.App
 {
-    public class GildedTros
+    public static class GildedTros
     {
-        IList<Item> Items;
-        public GildedTros(IList<Item> Items)
-        {
-            this.Items = Items;
-        }
+        const int MaxQuality = 50;
+        const int MinQuality = 0;
 
-        public void UpdateQuality()
+        static bool IsSmellyItem(string itemName) => itemName.Equals("Duplicate Code") ||
+                                              itemName.Equals("Long Methods") ||
+                                              itemName.Equals("Ugly Variable Names");
+
+        static int GetBackstagePassesQualityUpdateFactor(int sellIn) => sellIn > 10 ? 1 : sellIn > 5 ? 2 : 3;
+
+        public static void UpdateQuality(IList<Item> items)
         {
-            for (var i = 0; i < Items.Count; i++)
+            for (int i = 0; i < items.Count; i++)
             {
-                if (Items[i].Name != "Good Wine" 
-                    && Items[i].Name != "Backstage passes for Re:factor"
-                    && Items[i].Name != "Backstage passes for HAXX")
+                // Do not update the legendary item, since it is never sold and the quality never changes
+                // it is not necessary to update it.
+                if (items[i].Name.Equals("B-DAWG Keychain"))
+                    continue;
+
+                // Update good wine
+                if (items[i].Name.Equals("Good Wine"))
                 {
-                    if (Items[i].Quality > 0)
-                    {
-                        if (Items[i].Name != "B-DAWG Keychain")
-                        {
-                            Items[i].Quality = Items[i].Quality - 1;
-                        }
-                    }
+                    if (items[i].Quality < MaxQuality)
+                        items[i].Quality = IncreaseItemQuality(items[i].Quality, MaxQuality, 2);
                 }
-                else
+                else if (items[i].Name.Contains("Backstage passes for")) // Update backstage passes
+
                 {
-                    if (Items[i].Quality < 50)
+                    // If sellin has passed
+                    if (items[i].SellIn < 0)
                     {
-                        Items[i].Quality = Items[i].Quality + 1;
-
-                        if (Items[i].Name == "Backstage passes for Re:factor"
-                        || Items[i].Name == "Backstage passes for HAXX")
-                        {
-                            if (Items[i].SellIn < 11)
-                            {
-                                if (Items[i].Quality < 50)
-                                {
-                                    Items[i].Quality = Items[i].Quality + 1;
-                                }
-                            }
-
-                            if (Items[i].SellIn < 6)
-                            {
-                                if (Items[i].Quality < 50)
-                                {
-                                    Items[i].Quality = Items[i].Quality + 1;
-                                }
-                            }
-                        }
-                    }
-                }
-
-                if (Items[i].Name != "B-DAWG Keychain")
-                {
-                    Items[i].SellIn = Items[i].SellIn - 1;
-                }
-
-                if (Items[i].SellIn < 0)
-                {
-                    if (Items[i].Name != "Good Wine")
-                    {
-                        if (Items[i].Name != "Backstage passes for Re:factor"
-                            && Items[i].Name != "Backstage passes for HAXX")
-                        {
-                            if (Items[i].Quality > 0)
-                            {
-                                if (Items[i].Name != "B-DAWG Keychain")
-                                {
-                                    Items[i].Quality = Items[i].Quality - 1;
-                                }
-                            }
-                        }
-                        else
-                        {
-                            Items[i].Quality = Items[i].Quality - Items[i].Quality;
-                        }
+                        if (items[i].Quality != 0)
+                            items[i].Quality = 0;
                     }
                     else
                     {
-                        if (Items[i].Quality < 50)
-                        {
-                            Items[i].Quality = Items[i].Quality + 1;
-                        }
+                        items[i].Quality = IncreaseItemQuality(items[i].Quality, MaxQuality, GetBackstagePassesQualityUpdateFactor(items[i].SellIn));
                     }
                 }
+                else if (items[i].Quality > MinQuality)// Update other items (normal and smelly)
+                {
+                    items[i].Quality = DecreaseItemQuality(items[i].Quality, MinQuality, GetQualityDegradation(items[i].SellIn, IsSmellyItem(items[i].Name)));
+                }
+
+                // Update sellin
+                items[i].SellIn--;
             }
+        }
+
+        static int IncreaseItemQuality(int startingValue, int limit, int updateQuantity)
+            => startingValue >= limit ? limit : startingValue + updateQuantity > limit ? limit : startingValue + updateQuantity;
+
+        static int DecreaseItemQuality(int startingValue, int limit, int updateQuantity)
+            => startingValue <= limit ? limit : startingValue - updateQuantity < limit ? limit : startingValue - updateQuantity;
+
+        static int GetQualityDegradation(int sellIn, bool isSmelly)
+        {
+            int degradation = sellIn < 0 ? 2 : 1;
+            return isSmelly ? degradation * 2 : degradation;
         }
     }
 }
