@@ -26,7 +26,7 @@ namespace GildedTros.App
                 if (items[i].Name.Equals("Good Wine"))
                 {
                     if (items[i].Quality < MaxQuality)
-                        items[i].Quality = IncreaseItemQuality(items[i].Quality, MaxQuality, 2);
+                        items[i].Quality = IncreaseItemQuality(items[i].Quality, MaxQuality, 1);
                 }
                 else if (items[i].Name.Contains("Backstage passes for")) // Update backstage passes
 
@@ -34,8 +34,8 @@ namespace GildedTros.App
                     // If sellin has passed
                     if (items[i].SellIn < 0)
                     {
-                        if (items[i].Quality != 0)
-                            items[i].Quality = 0;
+                        if (items[i].Quality != MinQuality)
+                            items[i].Quality = MinQuality;
                     }
                     else
                     {

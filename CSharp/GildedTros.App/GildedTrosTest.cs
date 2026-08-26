@@ -109,26 +109,7 @@ namespace GildedTros.App
 
             GildedTros.UpdateQuality(items);
 
-            Assert.Equal(22, items[0].Quality);
-            Assert.Equal(9, items[0].SellIn);
-        }
-
-        [Fact]
-        public void GoodWine_CannotExceedQuality50()
-        {
-            var items = new List<Item>
-            {
-                new Item
-                {
-                    Name = "Good Wine",
-                    SellIn = 10,
-                    Quality = 49
-                }
-            };
-
-            GildedTros.UpdateQuality(items);
-
-            Assert.Equal(50, items[0].Quality);
+            Assert.Equal(21, items[0].Quality);
             Assert.Equal(9, items[0].SellIn);
         }
 
@@ -160,7 +141,7 @@ namespace GildedTros.App
                 {
                     Name = "Good Wine",
                     SellIn = 10,
-                    Quality = 48
+                    Quality = 49
                 }
             };
 
@@ -449,7 +430,7 @@ namespace GildedTros.App
             GildedTros.UpdateQuality(items);
 
             Assert.Equal(19, items[0].Quality);
-            Assert.Equal(22, items[1].Quality);
+            Assert.Equal(21, items[1].Quality);
             Assert.Equal(80, items[2].Quality);
 
             Assert.Equal(9, items[0].SellIn);
