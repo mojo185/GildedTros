@@ -1,4 +1,4 @@
-﻿OMGHAI!
+OMGHAI!
 -------- day 0 --------
 name, sellIn, quality
 Ring of Cleansening Code, 10, 20
@@ -18,8 +18,8 @@ name, sellIn, quality
 Ring of Cleansening Code, 9, 19
 Good Wine, 1, 1
 Elixir of the SOLID, 4, 6
-B-DAWG Keychain, 0, 80
 B-DAWG Keychain, -1, 80
+B-DAWG Keychain, -2, 80
 Backstage passes for Re:factor, 14, 20
 Backstage passes for Re:factor, 9, 50
 Backstage passes for HAXX, 4, 50
@@ -32,8 +32,8 @@ name, sellIn, quality
 Ring of Cleansening Code, 8, 18
 Good Wine, 0, 2
 Elixir of the SOLID, 3, 5
-B-DAWG Keychain, 0, 80
-B-DAWG Keychain, -1, 80
+B-DAWG Keychain, -2, 80
+B-DAWG Keychain, -3, 80
 Backstage passes for Re:factor, 13, 20
 Backstage passes for Re:factor, 8, 50
 Backstage passes for HAXX, 3, 50
@@ -46,8 +46,8 @@ name, sellIn, quality
 Ring of Cleansening Code, 7, 17
 Good Wine, -1, 3
 Elixir of the SOLID, 2, 4
-B-DAWG Keychain, 0, 80
-B-DAWG Keychain, -1, 80
+B-DAWG Keychain, -3, 80
+B-DAWG Keychain, -4, 80
 Backstage passes for Re:factor, 12, 20
 Backstage passes for Re:factor, 7, 50
 Backstage passes for HAXX, 2, 50
@@ -60,8 +60,8 @@ name, sellIn, quality
 Ring of Cleansening Code, 6, 16
 Good Wine, -2, 4
 Elixir of the SOLID, 1, 3
-B-DAWG Keychain, 0, 80
-B-DAWG Keychain, -1, 80
+B-DAWG Keychain, -4, 80
+B-DAWG Keychain, -5, 80
 Backstage passes for Re:factor, 11, 20
 Backstage passes for Re:factor, 6, 50
 Backstage passes for HAXX, 1, 50
@@ -74,8 +74,8 @@ name, sellIn, quality
 Ring of Cleansening Code, 5, 15
 Good Wine, -3, 5
 Elixir of the SOLID, 0, 2
-B-DAWG Keychain, 0, 80
-B-DAWG Keychain, -1, 80
+B-DAWG Keychain, -5, 80
+B-DAWG Keychain, -6, 80
 Backstage passes for Re:factor, 10, 20
 Backstage passes for Re:factor, 5, 50
 Backstage passes for HAXX, 0, 50
@@ -88,8 +88,8 @@ name, sellIn, quality
 Ring of Cleansening Code, 4, 14
 Good Wine, -4, 6
 Elixir of the SOLID, -1, 1
-B-DAWG Keychain, 0, 80
-B-DAWG Keychain, -1, 80
+B-DAWG Keychain, -6, 80
+B-DAWG Keychain, -7, 80
 Backstage passes for Re:factor, 9, 22
 Backstage passes for Re:factor, 4, 50
 Backstage passes for HAXX, -1, 50
@@ -102,8 +102,8 @@ name, sellIn, quality
 Ring of Cleansening Code, 3, 13
 Good Wine, -5, 7
 Elixir of the SOLID, -2, 0
-B-DAWG Keychain, 0, 80
-B-DAWG Keychain, -1, 80
+B-DAWG Keychain, -7, 80
+B-DAWG Keychain, -8, 80
 Backstage passes for Re:factor, 8, 24
 Backstage passes for Re:factor, 3, 50
 Backstage passes for HAXX, -2, 0
@@ -116,8 +116,8 @@ name, sellIn, quality
 Ring of Cleansening Code, 2, 12
 Good Wine, -6, 8
 Elixir of the SOLID, -3, 0
-B-DAWG Keychain, 0, 80
-B-DAWG Keychain, -1, 80
+B-DAWG Keychain, -8, 80
+B-DAWG Keychain, -9, 80
 Backstage passes for Re:factor, 7, 26
 Backstage passes for Re:factor, 2, 50
 Backstage passes for HAXX, -3, 0
@@ -130,8 +130,8 @@ name, sellIn, quality
 Ring of Cleansening Code, 1, 11
 Good Wine, -7, 9
 Elixir of the SOLID, -4, 0
-B-DAWG Keychain, 0, 80
-B-DAWG Keychain, -1, 80
+B-DAWG Keychain, -9, 80
+B-DAWG Keychain, -10, 80
 Backstage passes for Re:factor, 6, 28
 Backstage passes for Re:factor, 1, 50
 Backstage passes for HAXX, -4, 0
@@ -144,8 +144,8 @@ name, sellIn, quality
 Ring of Cleansening Code, 0, 10
 Good Wine, -8, 10
 Elixir of the SOLID, -5, 0
-B-DAWG Keychain, 0, 80
-B-DAWG Keychain, -1, 80
+B-DAWG Keychain, -10, 80
+B-DAWG Keychain, -11, 80
 Backstage passes for Re:factor, 5, 30
 Backstage passes for Re:factor, 0, 50
 Backstage passes for HAXX, -5, 0
@@ -158,8 +158,8 @@ name, sellIn, quality
 Ring of Cleansening Code, -1, 9
 Good Wine, -9, 11
 Elixir of the SOLID, -6, 0
-B-DAWG Keychain, 0, 80
-B-DAWG Keychain, -1, 80
+B-DAWG Keychain, -11, 80
+B-DAWG Keychain, -12, 80
 Backstage passes for Re:factor, 4, 33
 Backstage passes for Re:factor, -1, 50
 Backstage passes for HAXX, -6, 0
@@ -172,8 +172,8 @@ name, sellIn, quality
 Ring of Cleansening Code, -2, 7
 Good Wine, -10, 12
 Elixir of the SOLID, -7, 0
-B-DAWG Keychain, 0, 80
-B-DAWG Keychain, -1, 80
+B-DAWG Keychain, -12, 80
+B-DAWG Keychain, -13, 80
 Backstage passes for Re:factor, 3, 36
 Backstage passes for Re:factor, -2, 0
 Backstage passes for HAXX, -7, 0
@@ -186,8 +186,8 @@ name, sellIn, quality
 Ring of Cleansening Code, -3, 5
 Good Wine, -11, 13
 Elixir of the SOLID, -8, 0
-B-DAWG Keychain, 0, 80
-B-DAWG Keychain, -1, 80
+B-DAWG Keychain, -13, 80
+B-DAWG Keychain, -14, 80
 Backstage passes for Re:factor, 2, 39
 Backstage passes for Re:factor, -3, 0
 Backstage passes for HAXX, -8, 0
@@ -200,8 +200,8 @@ name, sellIn, quality
 Ring of Cleansening Code, -4, 3
 Good Wine, -12, 14
 Elixir of the SOLID, -9, 0
-B-DAWG Keychain, 0, 80
-B-DAWG Keychain, -1, 80
+B-DAWG Keychain, -14, 80
+B-DAWG Keychain, -15, 80
 Backstage passes for Re:factor, 1, 42
 Backstage passes for Re:factor, -4, 0
 Backstage passes for HAXX, -9, 0
@@ -214,8 +214,8 @@ name, sellIn, quality
 Ring of Cleansening Code, -5, 1
 Good Wine, -13, 15
 Elixir of the SOLID, -10, 0
-B-DAWG Keychain, 0, 80
-B-DAWG Keychain, -1, 80
+B-DAWG Keychain, -15, 80
+B-DAWG Keychain, -16, 80
 Backstage passes for Re:factor, 0, 45
 Backstage passes for Re:factor, -5, 0
 Backstage passes for HAXX, -10, 0
@@ -228,8 +228,8 @@ name, sellIn, quality
 Ring of Cleansening Code, -6, 0
 Good Wine, -14, 16
 Elixir of the SOLID, -11, 0
-B-DAWG Keychain, 0, 80
-B-DAWG Keychain, -1, 80
+B-DAWG Keychain, -16, 80
+B-DAWG Keychain, -17, 80
 Backstage passes for Re:factor, -1, 48
 Backstage passes for Re:factor, -6, 0
 Backstage passes for HAXX, -11, 0
@@ -242,8 +242,8 @@ name, sellIn, quality
 Ring of Cleansening Code, -7, 0
 Good Wine, -15, 17
 Elixir of the SOLID, -12, 0
-B-DAWG Keychain, 0, 80
-B-DAWG Keychain, -1, 80
+B-DAWG Keychain, -17, 80
+B-DAWG Keychain, -18, 80
 Backstage passes for Re:factor, -2, 0
 Backstage passes for Re:factor, -7, 0
 Backstage passes for HAXX, -12, 0
@@ -256,8 +256,8 @@ name, sellIn, quality
 Ring of Cleansening Code, -8, 0
 Good Wine, -16, 18
 Elixir of the SOLID, -13, 0
-B-DAWG Keychain, 0, 80
-B-DAWG Keychain, -1, 80
+B-DAWG Keychain, -18, 80
+B-DAWG Keychain, -19, 80
 Backstage passes for Re:factor, -3, 0
 Backstage passes for Re:factor, -8, 0
 Backstage passes for HAXX, -13, 0
@@ -270,8 +270,8 @@ name, sellIn, quality
 Ring of Cleansening Code, -9, 0
 Good Wine, -17, 19
 Elixir of the SOLID, -14, 0
-B-DAWG Keychain, 0, 80
-B-DAWG Keychain, -1, 80
+B-DAWG Keychain, -19, 80
+B-DAWG Keychain, -20, 80
 Backstage passes for Re:factor, -4, 0
 Backstage passes for Re:factor, -9, 0
 Backstage passes for HAXX, -14, 0
@@ -284,8 +284,8 @@ name, sellIn, quality
 Ring of Cleansening Code, -10, 0
 Good Wine, -18, 20
 Elixir of the SOLID, -15, 0
-B-DAWG Keychain, 0, 80
-B-DAWG Keychain, -1, 80
+B-DAWG Keychain, -20, 80
+B-DAWG Keychain, -21, 80
 Backstage passes for Re:factor, -5, 0
 Backstage passes for Re:factor, -10, 0
 Backstage passes for HAXX, -15, 0
@@ -298,8 +298,8 @@ name, sellIn, quality
 Ring of Cleansening Code, -11, 0
 Good Wine, -19, 21
 Elixir of the SOLID, -16, 0
-B-DAWG Keychain, 0, 80
-B-DAWG Keychain, -1, 80
+B-DAWG Keychain, -21, 80
+B-DAWG Keychain, -22, 80
 Backstage passes for Re:factor, -6, 0
 Backstage passes for Re:factor, -11, 0
 Backstage passes for HAXX, -16, 0
@@ -312,8 +312,8 @@ name, sellIn, quality
 Ring of Cleansening Code, -12, 0
 Good Wine, -20, 22
 Elixir of the SOLID, -17, 0
-B-DAWG Keychain, 0, 80
-B-DAWG Keychain, -1, 80
+B-DAWG Keychain, -22, 80
+B-DAWG Keychain, -23, 80
 Backstage passes for Re:factor, -7, 0
 Backstage passes for Re:factor, -12, 0
 Backstage passes for HAXX, -17, 0
@@ -326,8 +326,8 @@ name, sellIn, quality
 Ring of Cleansening Code, -13, 0
 Good Wine, -21, 23
 Elixir of the SOLID, -18, 0
-B-DAWG Keychain, 0, 80
-B-DAWG Keychain, -1, 80
+B-DAWG Keychain, -23, 80
+B-DAWG Keychain, -24, 80
 Backstage passes for Re:factor, -8, 0
 Backstage passes for Re:factor, -13, 0
 Backstage passes for HAXX, -18, 0
@@ -340,8 +340,8 @@ name, sellIn, quality
 Ring of Cleansening Code, -14, 0
 Good Wine, -22, 24
 Elixir of the SOLID, -19, 0
-B-DAWG Keychain, 0, 80
-B-DAWG Keychain, -1, 80
+B-DAWG Keychain, -24, 80
+B-DAWG Keychain, -25, 80
 Backstage passes for Re:factor, -9, 0
 Backstage passes for Re:factor, -14, 0
 Backstage passes for HAXX, -19, 0
@@ -354,8 +354,8 @@ name, sellIn, quality
 Ring of Cleansening Code, -15, 0
 Good Wine, -23, 25
 Elixir of the SOLID, -20, 0
-B-DAWG Keychain, 0, 80
-B-DAWG Keychain, -1, 80
+B-DAWG Keychain, -25, 80
+B-DAWG Keychain, -26, 80
 Backstage passes for Re:factor, -10, 0
 Backstage passes for Re:factor, -15, 0
 Backstage passes for HAXX, -20, 0
@@ -368,8 +368,8 @@ name, sellIn, quality
 Ring of Cleansening Code, -16, 0
 Good Wine, -24, 26
 Elixir of the SOLID, -21, 0
-B-DAWG Keychain, 0, 80
-B-DAWG Keychain, -1, 80
+B-DAWG Keychain, -26, 80
+B-DAWG Keychain, -27, 80
 Backstage passes for Re:factor, -11, 0
 Backstage passes for Re:factor, -16, 0
 Backstage passes for HAXX, -21, 0
@@ -382,8 +382,8 @@ name, sellIn, quality
 Ring of Cleansening Code, -17, 0
 Good Wine, -25, 27
 Elixir of the SOLID, -22, 0
-B-DAWG Keychain, 0, 80
-B-DAWG Keychain, -1, 80
+B-DAWG Keychain, -27, 80
+B-DAWG Keychain, -28, 80
 Backstage passes for Re:factor, -12, 0
 Backstage passes for Re:factor, -17, 0
 Backstage passes for HAXX, -22, 0
@@ -396,8 +396,8 @@ name, sellIn, quality
 Ring of Cleansening Code, -18, 0
 Good Wine, -26, 28
 Elixir of the SOLID, -23, 0
-B-DAWG Keychain, 0, 80
-B-DAWG Keychain, -1, 80
+B-DAWG Keychain, -28, 80
+B-DAWG Keychain, -29, 80
 Backstage passes for Re:factor, -13, 0
 Backstage passes for Re:factor, -18, 0
 Backstage passes for HAXX, -23, 0
@@ -410,8 +410,8 @@ name, sellIn, quality
 Ring of Cleansening Code, -19, 0
 Good Wine, -27, 29
 Elixir of the SOLID, -24, 0
-B-DAWG Keychain, 0, 80
-B-DAWG Keychain, -1, 80
+B-DAWG Keychain, -29, 80
+B-DAWG Keychain, -30, 80
 Backstage passes for Re:factor, -14, 0
 Backstage passes for Re:factor, -19, 0
 Backstage passes for HAXX, -24, 0
@@ -424,8 +424,8 @@ name, sellIn, quality
 Ring of Cleansening Code, -20, 0
 Good Wine, -28, 30
 Elixir of the SOLID, -25, 0
-B-DAWG Keychain, 0, 80
-B-DAWG Keychain, -1, 80
+B-DAWG Keychain, -30, 80
+B-DAWG Keychain, -31, 80
 Backstage passes for Re:factor, -15, 0
 Backstage passes for Re:factor, -20, 0
 Backstage passes for HAXX, -25, 0

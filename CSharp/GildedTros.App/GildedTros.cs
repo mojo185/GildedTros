@@ -11,7 +11,7 @@ namespace GildedTros.App
                                               itemName.Equals("Long Methods") ||
                                               itemName.Equals("Ugly Variable Names");
 
-        static int GetBackstagePassesQualityUpdateFactor(int sellIn) => sellIn > 10 ? 1 : sellIn > 5 ? 2 : 3;
+        static int GetBackstagePassesQualityUpdateFactor(int sellIn) => sellIn > 10 ? 0 : sellIn > 5 ? 2 : 3;
 
         public static void UpdateQuality(IList<Item> items)
         {

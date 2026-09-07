@@ -204,7 +204,7 @@ namespace GildedTros.App
 
             GildedTros.UpdateQuality(items);
 
-            Assert.Equal(21, items[0].Quality);
+            Assert.Equal(20, items[0].Quality);
             Assert.Equal(10, items[0].SellIn);
         }
 
