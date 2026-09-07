@@ -18,21 +18,19 @@ namespace GilderTrosFutureProof.App.Helpers
                 if (item.Name.Equals("B-DAWG Keychain"))
                 {
                     baseItems.Add(new LegendaryItem(item));
-                    continue;
                 }
                 else if (item.Name.Equals("Good Wine"))
                 {
                     baseItems.Add(new GoodWineItem(item));
-                    continue;
                 }
                 else if (item.Name.Contains("Backstage passes"))
                 {
                     baseItems.Add(new BackStagePassesItem(item));
-                    continue;
                 }
-
-                baseItems.Add(new NormalItem(item, IsSmellyItem(item.Name)));
-                continue;
+                else
+                {
+                    baseItems.Add(new NormalItem(item, IsSmellyItem(item.Name)));
+                }
             }
 
             return baseItems;
