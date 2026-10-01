@@ -1,5 +1,4 @@
 ﻿using GilderTrosFutureProof.App.Models;
-using System.Collections.Generic;
 
 namespace GilderTrosFutureProof.App;
 

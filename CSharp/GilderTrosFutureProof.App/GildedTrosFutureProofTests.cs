@@ -11,7 +11,7 @@ public class GildedTrosFutureProofTests
     [Theory]
     [InlineData("Normal item", 10, 20, typeof(NormalItem))]
     [InlineData("B-DAWG Keychain", 10, 80, typeof(LegendaryItem))]
-    [InlineData("Long Methods", 10, 20, typeof(NormalItem))]
+    [InlineData("Long Methods", 10, 20, typeof(SmellyItem))]
     [InlineData("Backstage passes for Re:factor", 10, 20, typeof(BackStagePassesItem))]
     [InlineData("Good Wine", 10, 20, typeof(GoodWineItem))]
     public void ConvertSingleTest(string name, int sellIn, int quality, Type resultType)
@@ -39,13 +39,13 @@ public class GildedTrosFutureProofTests
 
         Assert.IsType<NormalItem>(convertedItems[0]);
         Assert.IsType<LegendaryItem>(convertedItems[1]);
-        Assert.IsType<NormalItem>(convertedItems[2]);
+        Assert.IsType<SmellyItem>(convertedItems[2]);
         Assert.IsType<BackStagePassesItem>(convertedItems[3]);
         Assert.IsType<GoodWineItem>(convertedItems[4]);
         Assert.IsType<BackStagePassesItem>(convertedItems[5]);
-        Assert.IsType<NormalItem>(convertedItems[6]);
+        Assert.IsType<SmellyItem>(convertedItems[6]);
         Assert.IsType<LegendaryItem>(convertedItems[7]);
-        Assert.IsType<NormalItem>(convertedItems[8]);
+        Assert.IsType<SmellyItem>(convertedItems[8]);
     }
 
     [Fact]
@@ -59,7 +59,6 @@ public class GildedTrosFutureProofTests
         Assert.Equal("Normal item", normalItem.Name);
         Assert.Equal(5, normalItem.SellIn);
         Assert.Equal(20, normalItem.Quality);
-        Assert.False(normalItem.IsSmelly);
     }
 
     [Fact]
@@ -74,12 +73,11 @@ public class GildedTrosFutureProofTests
 
         for (int i = 0; i < convertedItems.Count; i++)
         {
-            var normalItem = Assert.IsType<NormalItem>(convertedItems[i]);
+            var smellyItem = Assert.IsType<SmellyItem>(convertedItems[i]);
 
-            Assert.Equal(items[i].Name, normalItem.Name);
-            Assert.Equal(5, normalItem.SellIn);
-            Assert.Equal(20, normalItem.Quality);
-            Assert.True(normalItem.IsSmelly);
+            Assert.Equal(items[i].Name, smellyItem.Name);
+            Assert.Equal(5, smellyItem.SellIn);
+            Assert.Equal(20, smellyItem.Quality);
         }
     }
 
@@ -129,7 +127,7 @@ public class GildedTrosFutureProofTests
     [Fact]
     public void UpdateNormalItem()
     {
-        List<BaseItem> items = new List<BaseItem> { new NormalItem(new Item() { Quality = 20, SellIn = 5, Name = "This is a normal item" }, false) };
+        List<BaseItem> items = new List<BaseItem> { new NormalItem(new Item() { Quality = 20, SellIn = 5, Name = "This is a normal item" }) };
 
         GildedTros.UpdateQuality(items);
 
@@ -140,7 +138,7 @@ public class GildedTrosFutureProofTests
     [Fact]
     public void UpdateNormalItemTo0()
     {
-        List<BaseItem> items = new List<BaseItem> { new NormalItem(new Item() { Quality = 1, SellIn = 5, Name = "This is a normal item" }, false) };
+        List<BaseItem> items = new List<BaseItem> { new NormalItem(new Item() { Quality = 1, SellIn = 5, Name = "This is a normal item" }) };
 
         GildedTros.UpdateQuality(items);
 
@@ -151,7 +149,7 @@ public class GildedTrosFutureProofTests
     [Fact]
     public void TryUpdateNormalItemBelow0()
     {
-        List<BaseItem> items = new List<BaseItem> { new NormalItem(new Item() { Quality = 0, SellIn = 5, Name = "This is a normal item" }, false) };
+        List<BaseItem> items = new List<BaseItem> { new NormalItem(new Item() { Quality = 0, SellIn = 5, Name = "This is a normal item" }) };
 
         GildedTros.UpdateQuality(items);
 
@@ -162,7 +160,7 @@ public class GildedTrosFutureProofTests
     [Fact]
     public void UpdateNormalItemSellinIs0()
     {
-        List<BaseItem> items = new List<BaseItem> { new NormalItem(new Item() { Quality = 20, SellIn = 0, Name = "This is a normal item" }, false) };
+        List<BaseItem> items = new List<BaseItem> { new NormalItem(new Item() { Quality = 20, SellIn = 0, Name = "This is a normal item" }) };
 
         GildedTros.UpdateQuality(items);
 
@@ -173,7 +171,7 @@ public class GildedTrosFutureProofTests
     [Fact]
     public void UpdateNormalItemSellinBelow0()
     {
-        List<BaseItem> items = new List<BaseItem> { new NormalItem(new Item() { Quality = 20, SellIn = -1, Name = "This is a normal item" }, false) };
+        List<BaseItem> items = new List<BaseItem> { new NormalItem(new Item() { Quality = 20, SellIn = -1, Name = "This is a normal item" }) };
 
         GildedTros.UpdateQuality(items);
 
@@ -184,7 +182,7 @@ public class GildedTrosFutureProofTests
     [Fact]
     public void UpdateSmellyItem()
     {
-        List<BaseItem> items = new List<BaseItem> { new NormalItem(new Item() { Quality = 20, SellIn = 5, Name = "Long Methods" }, true) };
+        List<BaseItem> items = new List<BaseItem> { new SmellyItem(new Item() { Quality = 20, SellIn = 5, Name = "Long Methods" }) };
 
         GildedTros.UpdateQuality(items);
 
@@ -195,7 +193,7 @@ public class GildedTrosFutureProofTests
     [Fact]
     public void UpdateSmellyItemTo0()
     {
-        List<BaseItem> items = new List<BaseItem> { new NormalItem(new Item() { Quality = 2, SellIn = 5, Name = "Long Methods" }, true) };
+        List<BaseItem> items = new List<BaseItem> { new SmellyItem(new Item() { Quality = 2, SellIn = 5, Name = "Long Methods" }) };
 
         GildedTros.UpdateQuality(items);
 
@@ -206,7 +204,7 @@ public class GildedTrosFutureProofTests
     [Fact]
     public void UpdateSmellyItemTo0From1()
     {
-        List<BaseItem> items = new List<BaseItem> { new NormalItem(new Item() { Quality = 1, SellIn = 5, Name = "Long Methods" }, true) };
+        List<BaseItem> items = new List<BaseItem> { new SmellyItem(new Item() { Quality = 1, SellIn = 5, Name = "Long Methods" }) };
 
         GildedTros.UpdateQuality(items);
 
@@ -217,7 +215,7 @@ public class GildedTrosFutureProofTests
     [Fact]
     public void TryUpdateSmellyItemBelow0()
     {
-        List<BaseItem> items = new List<BaseItem> { new NormalItem(new Item() { Quality = 0, SellIn = 5, Name = "Long Methods" }, true) };
+        List<BaseItem> items = new List<BaseItem> { new SmellyItem(new Item() { Quality = 0, SellIn = 5, Name = "Long Methods" }) };
 
         GildedTros.UpdateQuality(items);
 
@@ -228,7 +226,7 @@ public class GildedTrosFutureProofTests
     [Fact]
     public void UpdateSmellyItemSellinIs0()
     {
-        List<BaseItem> items = new List<BaseItem> { new NormalItem(new Item() { Quality = 20, SellIn = 0, Name = "Long Methods" }, true) };
+        List<BaseItem> items = new List<BaseItem> { new SmellyItem(new Item() { Quality = 20, SellIn = 0, Name = "Long Methods" }) };
 
         GildedTros.UpdateQuality(items);
 
@@ -239,7 +237,7 @@ public class GildedTrosFutureProofTests
     [Fact]
     public void UpdateSmellyItemSellinBelow0()
     {
-        List<BaseItem> items = new List<BaseItem> { new NormalItem(new Item() { Quality = 20, SellIn = -1, Name = "Long Methods" }, true) };
+        List<BaseItem> items = new List<BaseItem> { new SmellyItem(new Item() { Quality = 20, SellIn = -1, Name = "Long Methods" }) };
 
         GildedTros.UpdateQuality(items);
 
@@ -524,8 +522,8 @@ public class GildedTrosFutureProofTests
     {
         List<BaseItem> items = new()
         {
-            new NormalItem( new Item { Name = "Normal", SellIn = 5, Quality = 20 }, false),
-            new NormalItem( new Item { Name = "Long Methods", SellIn = 5, Quality = 20 }, true),
+            new NormalItem( new Item { Name = "Normal", SellIn = 5, Quality = 20 }),
+            new SmellyItem( new Item { Name = "Long Methods", SellIn = 5, Quality = 20 }),
             new GoodWineItem( new Item { Name = "Good Wine", SellIn = 5, Quality = 20 }),
             new LegendaryItem( new Item { Name = "B-DAWG Keychain", SellIn = 5, Quality = 80 }),
             new BackStagePassesItem( new Item { Name = "Backstage passes for Re:factor", SellIn = 10, Quality = 20 })

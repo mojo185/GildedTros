@@ -29,7 +29,7 @@ namespace GilderTrosFutureProof.App.Helpers
                 }
                 else
                 {
-                    baseItems.Add(new NormalItem(item, IsSmellyItem(item.Name)));
+                    baseItems.Add(IsSmellyItem(item.Name) ? new SmellyItem(item) : new NormalItem(item));
                 }
             }
 

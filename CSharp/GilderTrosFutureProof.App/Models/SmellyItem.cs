@@ -1,8 +1,8 @@
 ﻿namespace GilderTrosFutureProof.App.Models
 {
-    internal class NormalItem : BaseItem
+    internal sealed class SmellyItem : NormalItem
     {
-        public NormalItem(Item item) : base(item)
+        public SmellyItem(Item item) : base(item)
         {
         }
 
@@ -19,7 +19,8 @@
 
         protected override int GetQualityUpdateFactor()
         {
-            return SellIn < 0 ? 2 : 1;
+            int degradation = base.GetQualityUpdateFactor();
+            return degradation * 2;
         }
     }
 }
